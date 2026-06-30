@@ -1,0 +1,149 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+  padding: 20px;
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  backdrop-filter: blur(10px);
+  transition: background 0.2s;
+}
+
+.search-box input::placeholder { color: rgba(255,255,255,0.5); }
+.search-box input:focus { background: rgba(255,255,255,0.2); }
+
+.search-box button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 14px;
+  background: #e94560;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.search-box button:hover { background: #c73652; }
+.search-box button:active { transform: scale(0.96); }
+
+.card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 32px 28px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.15);
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.city-name {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.date {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+
+.weather-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 8px;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+}
+
+.temp {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 18px;
+  opacity: 0.75;
+  text-transform: capitalize;
+  margin-bottom: 28px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.detail-box {
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 12px;
+  opacity: 0.55;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.error {
+  text-align: center;
+  background: rgba(233, 69, 96, 0.2);
+  border: 1px solid rgba(233, 69, 96, 0.4);
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 15px;
+  animation: fadeIn 0.3s ease;
+}
